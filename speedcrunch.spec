@@ -11,7 +11,9 @@ URL:		http://www.speedcrunch.org
 BuildRequires:	QtGui-devel
 BuildRequires:	QtXml-devel
 BuildRequires:	cmake >=2.4.4
+BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
+BuildRequires:	qt4-qmake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
