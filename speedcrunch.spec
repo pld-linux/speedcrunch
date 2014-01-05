@@ -1,5 +1,5 @@
 Summary:	SpeedCrunch is a fast, high precision and powerful desktop calculator
-Summary(hu.UTF-8):	SpeedCrunch egy gyors, nagy pontosságú és hatékony desktop-számológép.
+Summary(hu.UTF-8):	SpeedCrunch egy gyors, nagy pontosságú és hatékony desktop-számológép
 Name:		speedcrunch
 Version:	0.10.1
 Release:	1
@@ -7,7 +7,7 @@ License:	GPL v2
 Group:		Applications/Math
 Source0:	http://speedcrunch.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	344ee1303b05502d28c58a2fff1ca6b2
-URL:		http://www.speedcrunch.org
+URL:		http://www.speedcrunch.org/
 BuildRequires:	QtGui-devel
 BuildRequires:	QtXml-devel
 BuildRequires:	cmake >=2.4.4
@@ -17,7 +17,7 @@ BuildRequires:	qt4-qmake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-SpeedCrunch is a fast, high precision and powerful desktop calculator
+SpeedCrunch is a fast, high precision and powerful desktop calculator.
 
 %description -l hu.UTF-8
 SpeedCrunch egy gyors, nagy pontosságú és hatékony desktop-számológép.
@@ -48,11 +48,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 # imho the pdf-format is enough, odt is not necessary
 %doc ChangeLog ChangeLog.floatnum HACKING.txt INSTALL.txt PACKAGERS README TRANSLATORS doc/speedcrunch-manual.pdf doc/logic-unit.pdf
+%attr(755,root,root) %{_bindir}/%{name}
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/locale
-%{_pixmapsdir}/%{name}.png
-%{_datadir}/applications/%{name}.desktop
-%attr(755,root,root) %{_bindir}/%{name}
 %lang(ca) %{_datadir}/%{name}/locale/ca.qm
 %lang(cs) %{_datadir}/%{name}/locale/cs.qm
 %lang(de) %{_datadir}/%{name}/locale/de.qm
